@@ -28,7 +28,7 @@ public class Main_Class {
 		case 3:
 			System.out.println("Enter one number");
 			n= input.nextInt();
-			System.out.println("The sum of the squares is "+lessOrEqual(n));
+			System.out.println("The sum of the squares is "+sumSquares(n));
 			break;
 		}
 	}
