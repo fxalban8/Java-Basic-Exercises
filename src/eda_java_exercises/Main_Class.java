@@ -7,9 +7,21 @@ public class Main_Class {
 		// TODO Auto-generated method stub
 		Scanner input = new Scanner (System.in);
 		int option=0;
+		int n,m;
 		do {
 			deployMenu();
+			option=input.nextInt();
 		}while(option!=1&&option!=2&&option!=3);
+		
+		switch(option) {
+		case 1:
+			
+			break;
+		case 2:
+			break;
+		case 3:
+			break;
+		}
 	}
 	
 	
