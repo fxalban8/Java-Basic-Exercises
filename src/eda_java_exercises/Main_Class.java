@@ -59,6 +59,13 @@ public class Main_Class {
 		}
 		return x;
 	}
-}
+	
+	public static String showResult(int n) {
+		String result = new String("The result is"+n);
+		return result;
+	}
+	
+	
+	}		
 
 
