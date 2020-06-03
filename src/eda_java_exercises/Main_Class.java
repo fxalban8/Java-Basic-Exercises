@@ -7,7 +7,6 @@ public class Main_Class {
 		// TODO Auto-generated method stub
 		Scanner input = new Scanner (System.in);
 		int option=0;
-		int n,m;
 		do {
 			deployMenu();
 			option=input.nextInt();
@@ -15,57 +14,67 @@ public class Main_Class {
 		
 		switch(option) {
 		case 1:
-			System.out.println("Enter two numbers");
-			n= input.nextInt();
-			m=input.nextInt();
-			System.out.println(isMultiple(n,m));
+			showResult((isMultiple()));
 			break;
 		case 2:
-			System.out.println("Enter one number");
-			n= input.nextInt();
-			System.out.println("The sum is "+lessOrEqual(n));
+			showResult(lessOrEqual());
 			break;
 		case 3:
-			System.out.println("Enter one number");
-			n= input.nextInt();
-			System.out.println("The sum of the squares is "+sumSquares(n));
+			showResult(sumSquares());
 			break;
 		}
+	}
+	
+	public static int enterNumber() {
+		Scanner input= new Scanner(System.in);
+		System.out.println("Enter a number");
+		int x;
+		x= input.nextInt();
+		return x;
+		
 	}
 	
 	
 	public static void deployMenu() {
 		System.out.println("1. N multiple of M");
 		System.out.println("2. Less or equal than X ");
-		System.out.println("3. Sum_Squares");
+		System.out.println("3. Sum_Squares\n");
 	}
 	
-	public static boolean isMultiple(long n, long m) {
+	public static boolean isMultiple() {
+		int n,m;
+		n=enterNumber();
+		m=enterNumber();
 		return n%m==0;
 	}
 	
-	public static int lessOrEqual(long n) {
-		int x=0;
-		for(int i=1;i<=n;i++) {
-			x+=i;
+	public static int lessOrEqual() {
+		int x=enterNumber(),m=0;
+		for(int i=1;i<=x;i++) {
+			m+=i;
 		}
-		return x;
+		System.out.println(x);
+		return m;
 	}
 	
-	public static int sumSquares(long n) {
-		int x=0;
-		for(int i=1;i<=n;i++) {
-			x+=i*i;
+	public static int sumSquares() {
+		int x= enterNumber(), m=0;
+		for(int i=1;i<=x;i++) {
+			m+=i*i;
 		}
-		return x;
+		return m;
 	}
 	
-	public static String showResult(int n) {
-		String result = new String("The result is"+n);
-		return result;
+	public static void showResult(int n) {
+		System.out.println("The result is "+n);
 	}
 	
-	
+	public static void showResult(boolean x) {
+		if(x==true) {
+			System.out.println("It's multiple");
+		}else
+			System.out.println("It's not multiple");
+	}
 	}		
 
 
